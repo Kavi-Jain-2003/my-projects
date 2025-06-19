@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilevel navbar</title>
+    <link rel="stylesheet" href="multilevel_nav.css">
+    <!-- require jquery installment and its file part19 cyberwarriors -->
+
+</head>
+<body>
+    <div class="menu-content">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+            <a href="#" class="dropbtn">Services:-></a>
+            <ul class="dropdown">
+                <li><a href="#">Services 1</a></li>
+                <li><a href="#">Services 2</a></li>
+                <li>
+                    <a href="#" class="dropbtn2">Services 3:-></a>
+                    <ul class="multi">
+                        <li><a href="#">Services 3.1</a></li>
+                        <li><a href="#">Services 3.2</a></li>
+                        <li><a href="#">Services 3.3</a></li>
+                        <li><a href="#">Services 3.4</a></li>
+                        <li><a href="#">Services 3.5</a></li>
+                        <li><a href="#">Services 3.6</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services 4</a></li>
+                <li><a href="#">Services 5</a></li>
+                <li><a href="#">Services 6</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </div>
+    <!-- works with jquery -->
+    <script>
+        $('.dropbtn').click(function()
+        {
+            $('.dropbtn').toggleClass('display');
+            $('.multi').removeClass('display');
+        })
+        $('.dropbtn2').click(function()
+        {
+            $('.multi').toggleClass('display');
+        })
+    </script>
+    
+</body>
+</html>

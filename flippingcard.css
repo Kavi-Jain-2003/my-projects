@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section
+{
+    position:relative;
+    min-height:100vh;
+    width:100%;
+    background: #121321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+     /*the below lines are for rotating the card*/
+     perspective: 1000px;
+}
+/*to get the purpe shaded circle for the corners of card*/
+/*circle1*/
+section::before
+{
+    content:"";
+    position:absolute;
+    height: 240px;
+    width:240px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,purple,white);
+    transform: translate(-150px,-100px);
+}
+/*circle2*/
+section::after
+{
+    content:"";
+    position:absolute;
+    height: 240px;
+    width:240px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,purple,white);
+    transform: translate(150px,100px);
+}
+.container
+{/*to show the transparent corners of the card over the circle*/
+    position: relative;
+    z-index:100;
+    height: 250px;
+    width: 400px;
+     /*the below lines are for rotating the card*/
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.container:hover
+{
+    transform: rotateY(180deg);
+     /*the above lines are for rotating the card*/
+}
+/*to make he card transparent i.e 0.1 and to bring it after the circles*/
+.container .card
+{
+    position: absolute;
+    backface-visibility: hidden;
+    /*the above lines are for rotating the card*/
+    height: 100%;
+    width: 100%;
+    border-radius:25px;
+    background-color: rgba(255, 255, 255, 0.1);    
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    backdrop-filter:blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+}
+.front-face header, .front-face .logo{
+    display: flex;
+    align-items: center;
+}
+.front-face header{
+    justify-content: space-between;
+}
+.front-face .logo img
+{
+    width:50px;
+    margin-right: 10px;
+    border-radius: 45%;
+}
+h5{
+    font-size: 20px;
+    font-weight: 300;
+}
+.front-face .chip{
+    width:50px;
+}
+.front-face .card-details
+{
+    padding: 5px;
+    margin-top: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: larger;
+}
+h6{
+    font-size: 16px;
+    font-weight: 250;
+}
+h5.number
+{
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+h5.name
+{
+    margin-top: 20px;
+}
+.card.back-face
+{
+    border: none;
+    padding: 15px 25px 25px 25px;
+    /*rotating 180 degree*/
+    transform: rotateY(180deg);
+}
+.card.back-face h6 
+{ 
+    font-size: 11px;
+}
+.card.back-face .magnetic-strip
+{
+    position: absolute;
+    top: 48px;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    background: #000;
+}
+.magnetic-strip{
+    padding: 20px;
+}
+.card.back-face .signature
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px;
+    height: 40px;
+    width: 85%;
+    border-radius: 6px;
+    background-color: white;
+    background: repeating-linear-gradient(#fff,
+    #fff 3px,
+    #efefef 0px,
+    #efefef 9px );
+}
+/*for hiding the card no.*/
+.signature i
+{
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-right: -30px;
+    color: #000;
+    z-index:-1;
+}
+.card.back-face h5{
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

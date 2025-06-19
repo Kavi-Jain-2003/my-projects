@@ -1,0 +1,292 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 1rem=16px */
+html{
+    font-size: 62.5%;
+}
+body,html{
+    font-family: "Poppins",sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: white;
+}
+body{
+    font-size: 1.4rem;
+}
+/* topmost navigation bar */
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+a{
+    font-size: 20px;
+    font-weight: 300px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+header{
+    background-color: rgb(86, 86, 238);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+nav ul{
+    display: flex;
+    gap: 2rem;
+}
+nav li{
+    font-size: 3rem;
+    border-bottom: 0.4rem transparent solid;
+    transition:0.3s ease-in-out ;
+}
+nav li:hover
+{
+    border-bottom: 0.4rem rgb(255, 255, 0) solid;
+    transition:0.3s ease-in-out ;
+}
+.logo
+{
+    font-size: 4rem;
+    font-weight: 700;
+}
+/* below the navigation bar */
+#hero
+{
+    background-color: turquoise;
+    /* padding:top-bottom left-right */
+    padding: 4rem 0;
+    border-bottom:4px solid blue;
+}
+.hero_image img
+{
+    height:750;
+    width:450;
+    border-radius: 10%;
+}
+#hero .container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hero_content
+{
+    display: grid;
+    place-items: center;
+}
+#hero h1{
+    font-size: 5rem;
+    font-weight: bold;
+}
+.hi_text
+{
+    font-size: 8rem;
+    font-weight: bold;
+    color: yellow;
+}
+.name_text
+{
+    font-size: 7rem;
+}
+#hero h2{
+    font-size: 6rem;
+    font-weight: bold;
+    /* typreiter animation */
+    overflow:hidden;/*ensures the content is not revealed until the animation*/
+    border-right: 0.15em solid orange;/*typewriter cursor */ 
+    white-space: nowrap;/*keeps the content on a single line*/
+    margin: 0 auto;  /*gives the scrolling effect as the typing happens*/
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing
+{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+@keyframes blink-caret
+{
+    from,to{
+        border-color: transparent;
+    }
+    10%{
+        border-color: orange;
+    }
+}
+/* project section */
+#project
+{
+    background-color:rgb(243, 6, 113);
+}
+#project h2{
+    font-size: 6rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+.card img{
+    width:350px;
+    height: 350px;
+}
+.project_container
+{
+    /* to make the cards responsive automatically */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: -50px;
+}
+.grid_item
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+}
+.card:hover img{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+.card:hover .card_content{
+    background-color: white;
+    color: blue;
+    /* for the image bottom header */
+    transform:translate(0px);
+}
+
+.card_content
+{
+    padding: 2rem;
+    position: relative;
+    top:-7.3rem;
+    border-radius: 20%;
+    margin-bottom: -3rem;
+    transition: 0.5s ease-in-out;
+    /* for the image bottom header */
+    transform: translate(0px);
+    background-color: rgba(0, 255, 255, 0.529);
+}
+.card_content h3{
+    text-align: center;
+}
+/* contact section */
+.contact_way img
+{
+    width:50;
+    height:50;
+}
+#contact
+{
+    background-color:cornflowerblue;
+}
+#contact h2{
+    font-size: 6rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+#contact .container{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+.top_content
+{
+    gap: 5rem;
+    max-width: 800px;
+    display: grid;
+    margin:0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
+}
+.contact_way{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.contact_way h3{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.bottom_content{
+    max-width: 400px;
+    gap:1rem;
+    display: grid;
+    margin:0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
+}
+/* footer */
+footer
+{
+    background-color: rgb(255, 64, 0);
+    padding: 2rem;
+    color: white;
+    font-size: 2.6rem;
+    text-align: center;
+}
+/* rem helps in responsiveness */
+/* media query */
+@media(max-width:786px)
+{
+    html{
+        font-size: 40%;
+    }
+    #hero .contaienr
+    {
+        flex-direction: column;
+    }
+    .hero_image
+    {
+        display: grid;
+        place-items: center;
+    }
+    #contact .container
+    {
+        height: 70vh;
+    }
+}
+@media(max-width:500px)
+{
+    html{
+        font-size: 32%;
+    }
+    #hero .contaienr
+    {
+        flex-direction: column;
+    }
+    .hero_image
+    {
+        display: grid;
+        place-items: center;
+    }
+    #contact .container{
+        height: 50vh;
+    }
+}

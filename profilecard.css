@@ -1,0 +1,150 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    /* to make the pic  to the center */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+.profile-card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box around the image */
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-radius: 24px;
+    padding: 25px;
+    position: relative;
+}
+/* to fit blue color behind santa */
+.profile-card::before
+{
+    content:"";
+    position: absolute;
+    height: 36%;
+    width:100%;
+    background-color: #4070f4;
+    top:0;
+    left:0;
+    border-radius: 24px 24px 0 0;
+
+}
+.image 
+{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(7, 7, 164);
+    padding: 3px;
+    margin-bottom: 10px;
+}
+.image .profile-img
+{
+    /* 100% to the image div size */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.profile-card .text-data
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#333;
+}
+.text-data .name
+{
+    font-size: 25px;
+    font-weight: 500;
+}
+.text-data .job
+{
+    font-size: 19px;
+    font-weight: 400;
+}
+.profile-card .media-button
+{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.media-button img
+{
+    border-radius: 50%;
+    height: 40px;
+    width: 48px;
+}
+.media-button .link
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:34px;
+    width: 34px;
+    /* margin:top-bottom left-right */
+    margin: 0 8px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.profile-card .buttons
+{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.buttons .button{
+    color:#fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: #4070f4;
+    transition: all 0.3s ease;
+}
+.buttons .button:hover{
+    background-color:#0e4bf1;
+}
+.profile-card .analytics .data img
+{
+    width:5vh;
+    height: 6vh;
+    border-radius: 50%;
+    border:3px solid grey;
+    margin-right: 6px;
+}
+.profile-card .analytics
+{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.analytics .data
+{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #e7e7e7;
+}
+.data:last-child
+{
+    border-right: none;
+}

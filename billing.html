@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="billing.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header--menu">
+            <div class="burger--icon">
+                <img src="images/sidebar.png" class="fa-solid fa-bars">
+            </div>
+            <div class="search--box">
+                <img src="images/search.png" class="fa-solid fa-magnifying-glass">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="menu--icons">
+                <img src="images/cake.jpg" class="fa-solid fa-bowl-food">
+                <div class="cart--icon">
+                    <img src="images/basket.JPG" class="fa-solid fa-cart-shopping">
+                    <span>0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- cover -->
+    <section class="cover">
+        <div class="cover--overlay">
+            <h1>Quick Bite</h1>
+            <span class="slogan">Where Taste Takes the Fast Lane</span>
+        </div>
+    </section>
+
+    <!-- menu -->
+    <main>
+        <h2 class="section--heading">Food Menu</h2>
+        <div class="menu--list">
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad2</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad3</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad4</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad5</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad6</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad7</h5>
+            </div>
+            <div class="menu--item">
+                <img src="images/flower.jpg">
+                <h5>Salad8</h5>
+            </div>
+        </div>
+
+        <!-- card item -->
+        <h2 class="section--heading">Menu Items</h2>
+        <div class="card--list">
+            <div class="card"> 
+                <img src="images/flower.jpg">
+                <h4 class="card--title">Salad</h4>
+
+                <div class="card--price">
+                    <span class="price">$3.50</span>
+                    <img src="images/plus2.JPG" class="fa-solid fa-plus add-to-cart">
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/flower.jpg">
+                <h4 class="card--title">Salad2</h4>
+
+                <div class="card--price">
+                    <span class="price">$7.50</span>
+                    <img src="images/plus2.JPG" class="fa-solid fa-plus add-to-cart">
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/flower.jpg">
+                <h4 class="card--title">Salad3</h4>
+
+                <div class="card--price">
+                    <span class="price">$6.50</span>
+                    <img src="images/plus2.JPG" class="fa-solid fa-plus add-to-cart">
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/flower.jpg">
+                <h4 class="card--title">Salad4</h4>
+
+                <div class="card--price">
+                    <span class="price">$5.50</span>
+                    <img src="images/plus2.JPG" class="fa-solid fa-plus add-to-cart">
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/flower.jpg">
+                <h4 class="card--title">Salad5</h4>
+
+                <div class="card--price">
+                    <span class="price">$4.50</span>
+                    <img src="images/plus2.JPG" class="fa-solid fa-plus add-to-cart">
+                </div>
+            </div>
+        </div>
+
+        <!-- sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar--close">
+                <img src="images/cross2.jpg" width="10px" height="10px" class="fa-solid fa-close">
+            </div>
+            <div class="cart--menu">
+                <h3>My Cart</h3>
+                <div class="cart--items"></div>
+            </div>
+            <div class="sidebar--footer">
+                <div class="total--amount">
+                    <h5>Total</h5>
+                    <div class="cart--total">$0.00</div>
+                </div>
+                <button class="checkout--btn">Check out</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="billing.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+h1{
+    color:rgb(0, 89, 243);
+    font-weight: 500;
+    font-family: "algerian";
+    font-size: 50px;
+}
+#menu ul{
+    list-style: none;
+}
+#menu ul li{
+    background-color: rgb(153, 0, 255);
+    border: 1px solid white;
+    width:267px;
+    /* 270px */
+    height: 40px;
+    text-align: center;
+    /* to make the text aligned to center */
+    line-height: 40px;
+    float: left;
+    /* main ul to relative and sub ul to absolute */
+    position: relative;
+}
+#menu ul li a{
+    color: white;
+    text-decoration: none;
+    /* to make the full block clickable along with the text link */
+    display: block;
+}
+#menu ul li a:hover{
+    /* applied to all list items */
+    background-color: hotpink;
+    color: blue;
+}
+#menu ul ul{
+    position: absolute;
+    display: none;
+}
+/* to show the drop down list  */
+#menu ul li:hover>ul{
+    display: block; 
+}
+.layer1{
+    /* or can be given in menu ul */
+    z-index: 2;
+}
+.layer2
+{
+ /* can be given in outerbox */
+    z-index: 1;
+}
+/* to hide other 3images behind the first image */
+#outerbox
+{
+    width: 1345px;
+    overflow: hidden;
+    height: 560px;
+}
+#sliderbox
+{
+    position: relative;
+    /* 1345*4=5380 */
+    width:5380px;
+    animation: slide 8s infinite; 
+    /* 4s*100/20sec for all images=20%*/
+}
+#sliderbox img
+{
+    float: left;
+    width:1345px;
+    height: 560px;
+}
+@keyframes slide
+{
+    0%
+    {
+        left: 0px;
+    }
+    /* image1 will remain at hold for 4s */
+    20%
+    {
+        left:0px;
+    }
+    /* for sliding at 5ths */
+    /* 5s*100/20s=25% */
+    25%
+    {
+        left:-1345px;
+    }
+    /* image 2 will remain at hold for 9s */
+    /* 9s*100/20s=45% */
+    45%
+    {
+        left: -1345px;
+    }
+    /* for sliding at 10ths */
+    /* 10s*100/20s=50% */
+    50%
+    {
+        left: -2690px;
+    }
+     /* image 3 will remain at hold for 14s */
+    /* 14s*100/20s=70% */
+    70%
+    {
+        left:-2690px;
+    }
+    /* for sliding at 15ths */
+    /* 15s*100/20s=75% */
+    75%
+    {
+        left:-4035px;
+    }
+     /* image 4 will remain at hold for 19s */
+    /* 19s*100/20s=95% */
+    95%
+    {
+        left:-4035px;
+    }
+    /* for sliding at 20ths */
+    /* 20s*100/20s=100% */
+    100%
+    {
+        left: -5380px;
+    }  
+}
+.top_cat
+{    
+    border: 0px solid black;
+    /* width:100%; by default */
+    display: flex;
+    /* aligned horizontally */
+    /* setting boxes fit to the background */
+    justify-content: space-around;
+    /* aligned vertically */
+    align-items: center;
+
+}
+.topcatpro
+{
+    border: 0px solid red;
+    width: 370px;
+    height: 265px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* shadow=horizontal vertical offset softness(blur) spreading */
+    /* html color codes website,for more enhanced shadow color */
+    /* box-shadow: 5px 5px 5px 5px black; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.35);
+    transition: transform 1s;
+}
+.topcatpro:hover
+{
+    /* 105% */
+    transform: scale(1.1);
+}
+.topcatpro img
+{
+    width: 370px;
+    height: 200px;
+}
+/* starrt for about page */
+.starrt img
+{
+    width: 140px;
+    height: 30px;
+    margin-left: 120px;
+    margin-top: 1px;
+}
+.starr img
+{
+    width: 100%;
+    height: 100%;
+    margin-left: 50px;
+    margin-top: -11px;
+    padding: 60px;
+}
+.starr
+{
+    border: 0px solid black;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -4px; */
+}
+.title
+{
+ text-align: center; 
+ font-size: 17px;  
+}
+/* footer */
+.footer
+{
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    border: 0px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerb
+{
+    height: 180px;
+    width: 200px;
+    border: 0px solid blue;
+    float: left;   
+    color: white; 
+    text-align: center;
+}
+/* about page css */
+.title p{
+    text-align: center;
+    font-size: 17px;
+}
+p
+{
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+/* veg thaali */
+.top_catveg
+{    
+    border: 0px solid black;
+    /* width:100%; by default */
+    display: flex;
+    /* aligned horizontally */
+    /* setting boxes fit to the background */
+    justify-content: space-around;
+    /* aligned vertically */
+    align-items: center;
+
+}
+.topcatproveg
+{
+    border: 0px solid red;
+    width: 370px;
+    height: 325px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* shadow=horizontal vertical offset softness(blur) spreading */
+    /* html color codes website,for more enhanced shadow color */
+    /* box-shadow: 5px 5px 5px 5px black; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.35);
+    transition: transform 1s;
+}
+.topcatproveg:hover
+{
+    /* 105% */
+    transform: scale(1.1);
+}
+.topcatproveg img
+{
+    width: 370px;
+    height: 200px;
+}
+.starrtt img
+{
+    width: 200px;
+    height: 35px;
+    margin-left: 70px;
+    padding:-10px 10px 10px 10px;
+    margin-top: -5px;
+}
+.btn
+{
+    border: 0px solid green;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn input
+{
+    height: 50px;
+    width: 210px;
+    border-radius: 8px;
+    border: 0px;
+    background-color: orange;
+    font-size: 20px;
+}
+.btn input:hover{
+    background-color: rgb(74, 9, 224);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.35);
+}
+.title b
+{
+    color: green;
+    font-size: 20px;
+}
+/* order */
+table{
+    height: 460px;
+}
+input
+{
+    width: 100%;
+    height: 35px;
+    border: 2px solid green;
+    font-size: 20px;
+} 
+textarea
+{
+    width:100%;
+    height:100%;
+    border: 2px solid green;
+    font-size: 22px;
+}
+select
+{
+    width: 100%;
+    height:35px;
+    margin-bottom: 10px;
+    border: 2px solid green;
+    font-size: 20px;
+}
+.butt
+{
+    width: 100%;
+}
+.butt:hover
+{
+    background-color: blueviolet;
+    color: wheat;
+    border: 4px solid yellow;
+}
+/* contact page */
+.contact
+{
+    width: 100%;
+    height: 450px;
+    border: 0px solid blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact_content
+{
+    width: 49%;
+    height: 440px;
+    border: 0px solid green;
+    float: left;
+}
+.contact_contentss .footerb_cont
+{
+    width: 100%;
+    height: 100px;    
+    color:rgb(255, 0, 157);
+    align-items: center;   
+    text-align: center;
+}
+.contact_contentss .footerb_cont a
+{
+    font-size: 50px;
+}
+.contact_contentss .footerb_cont img
+{
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+}   
+.contact_contentss
+{
+    border: 4px dashed saddlebrown;
+    background-color: rgb(192, 255, 109);
+    border-radius: 50%;
+    width:400px;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    font-weight: 500;
+}
+body
+{
+    /* header and main will come side by side */
+    display: flex;
+}
+header
+{
+    border: 1px solid salmon; 
+ /* height upto bottom */
+    height: 100vh;  
+    position: sticky;
+    
+    top:0;
+}
+nav h1{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px;
+    border-bottom: 1px solid rgb(136, 8, 255);
+    color: rgb(136, 8, 255);
+    text-decoration:underline;
+}
+nav ul
+{
+    list-style: none;
+}
+nav ul li{
+    font-size: 20px;
+    border: 1px solid rgb(96, 182, 244) ;
+    padding: 10px;
+    color:rgb(0, 255, 102);
+}
+nav ul li:hover
+{
+    background:#ff9d00;
+    transition: 0.4s ease-in-out;
+}
+/* main section */
+main{
+    padding: 50px;
+    max-width: 1200px;
+}
+section
+{
+    margin-bottom: 50px;
+}
+section article
+{
+    font-size: 14px;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section h2{
+    font-size: 30px;
+    /* to create an underline like hr tag */
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    line-height: 2;
+    color: #ff00bb;
+}
+section article ul 
+{
+    margin-left: 30px;
+}
+section article ul li
+{
+    margin-bottom: 10px;
+}
+/* fixing the code block */
+code{
+    white-space: pre-line;
+    line-height: 2;
+    background-color: aqua;
+    padding: 15px;
+    margin: 10px;
+    border-radius:5px ;
+}
+p,li{
+    color: #ff9d00;
+    font-size: 15px;
+    font-weight: 500;
+}
+/* responsive */
+@media (max-width:480px)
+{
+    body
+    {
+        flex-direction: column;
+    }
+    header
+    {
+        height: 200px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

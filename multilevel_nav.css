@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+ul
+{
+    list-style: none;
+    display: flex;
+    background-color: rgb(112, 218, 126);
+}
+ul li
+{
+    width: 100%;
+    border: 1px solid yellow;
+    text-align: center;
+    /* parent element set to relative and child element is set to absolute */
+    position: relative;
+}
+ul li a
+{
+    color:green;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px;
+    display: block;
+}
+.dropdown
+{
+    /* brings the list out of services cell */
+    position: absolute;
+    /* to make the drop down lsit */
+    width: 100%;
+    flex-wrap: wrap;
+    visibility: hidden; 
+    transition: 0.6s;
+    left: 0;
+    /* to make slider from top to bottom */
+    top:-650%; 
+    z-index:-1;
+}
+ul li:hover .dropdown
+{
+    visibility: visible;
+    top: 100%;
+}
+.multi
+{
+    position: absolute;
+    left: 150%;
+    width: 100%;
+    top: 0;
+    flex-wrap: wrap;
+    transition: 0.6s;
+    visibility: hidden;
+}
+.dropdown li:hover .multi
+{
+    left: 100%;
+    visibility: visible;
+}
+@media(max-width:767px)
+{
+    ul{
+        display: table;
+        width: 100%;
+    }   
+    ul li{
+        text-align: left;
+    }
+    .dropdown, .multi
+    {
+        position: relative;
+        left: 0;
+        top: 0;
+        transition: none;
+        visibility: visible;
+        display: none;
+        z-index: 1;
+    }
+    .display
+    {
+        display: block;
+    }
+    .dropdown li:hover .multi
+    {
+        left: 0;
+    } 
+}
+
+
+
+
+
+
+
+
+

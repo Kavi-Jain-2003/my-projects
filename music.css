@@ -1,0 +1,247 @@
+/* to make variables */
+:root{
+    --purple500:#281154;
+    --purple300:#270082;
+    --purple600:#1b0058;
+    --red600:#dc0000;
+    --body:#f9f6ff;
+    --max-width:1200px;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family:"Roboto",sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+section{
+    scroll-margin: 50px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.container
+{
+    max-width: 1200px;
+    margin:0 auto;
+}
+.container .logo 
+{  
+    font-size: 40px;
+    font-weight: 700;
+}
+header{
+    /* calling the variable using var() */
+    background-color: var(--purple300);
+    /* to stick the header(navigation bar) */
+    position: sticky;
+    top:0;
+    z-index: 100;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.9);
+}
+nav{ 
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    padding: 20px 0;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+nav ul li{
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease-in;
+}
+nav ul li:hover{
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in;
+}
+.hero-section{
+    background-image: url(images/music11.jpg);
+    height:100vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    /* to place the text in center */
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.hero-section .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.hero-section h1{
+    font-size: 100px; 
+}
+.hero-section h3{
+    font-size: 35px;
+}
+.hero-section p{
+    font-size: 20px;
+}
+.music-section
+{
+    padding-top: 50px;
+    background-color: var(--purple500); 
+    padding-bottom: 130px;
+}
+.music-section .container{
+    display: flex;
+    flex-direction:column;
+    gap: 50px;
+    /* to make everything in center */
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.music-section .container img{
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+}
+h2{
+    font-size:100px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.music-section .container .ipad-iphone-img img{
+    width: 400px;
+    height: 320px;
+    border-radius: 50%;
+}
+.ipad-iphone-img
+{
+    margin-top: -300px;
+    position: relative;
+    top: 300px;   
+}
+button{
+    padding: 10px 15px;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+button:hover{
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+    text-decoration: underline;
+}
+.primary-btn
+{
+    background-color: var(--red600);
+    color: white;
+}
+.secondary-btn
+{
+    background-color: var(--purple300);
+    color: wheat;
+}
+.about-music .container
+{
+    padding-top: 200px;
+    display: grid;
+    place-items: center;
+    gap:50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.mac-image img{
+    width:700px; 
+    height:500px;
+    border-radius: 20%;
+}
+.video-section{
+    background-image: url("images/music12.jpg");
+    min-height: 600px;
+    display: grid;
+    place-items: center;
+    color:white;
+    text-align: center;
+    background-position: center;    
+}
+.video-section .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.hero-section,.video-section{
+    position: relative;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.gift-section
+{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    gap: 50px;
+}
+.gift-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-upper
+{
+    background-color: var(--purple600);
+    padding: 20px auto;
+}
+.footer-upper .container{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.footer-upper h4{
+    padding-bottom: 10px;
+    /* for underline */
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;   
+}
+.footer-lower
+{
+    background-color: var(--purple300);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.gift-section
+{
+    scroll-margin: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
