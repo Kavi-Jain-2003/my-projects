@@ -1,0 +1,166 @@
+<?php 
+@include 'config.php';
+session_start();
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:login.php');
+}
+
+if (isset($_POST['order'])) {
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $number = mysqli_real_escape_string($conn, $_POST['number']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $method = mysqli_real_escape_string($conn, $_POST['method']);
+    $address = mysqli_real_escape_string($conn, 'flat no. ' . $_POST['flat'] . ', ' . $_POST['street'] . ', ' . $_POST['city'] . ', ' . $_POST['state'] . ', ' . $_POST['country'] . ', ' . $_POST['pin_code']);
+    $placed_on = date('d-M-Y');
+
+    $cart_total = 0;
+    $cart_products = [];
+    $cart_items = [];
+
+    $cart_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id='$user_id'") or die('query failed');
+    if (mysqli_num_rows($cart_query) > 0) {
+        while ($cart_item = mysqli_fetch_assoc($cart_query)) {
+            $product_id = $cart_item['pid'];
+            $quantity = $cart_item['quantity'];
+            $product_name = $cart_item['name'];
+            $sub_total = $cart_item['price'] * $quantity;
+
+            $cart_products[] = $product_name . ' (' . $quantity . ')';
+            $cart_total += $sub_total;
+
+            // Store cart item details for stock update
+            $cart_items[] = [
+                'product_id' => $product_id,
+                'quantity' => $quantity
+            ];
+        }
+    }
+
+    $total_products = implode(', ', $cart_products);
+
+    $order_check = mysqli_query($conn, "SELECT * FROM `orders` WHERE name='$name' AND number='$number' AND email='$email' AND method='$method' AND address='$address' AND total_products='$total_products' AND total_price='$cart_total'") or die('query failed');
+
+    if ($cart_total == 0) {
+        $message[] = 'Your cart is empty!';
+    } elseif (mysqli_num_rows($order_check) > 0) {
+        $message[] = 'Order already placed!';
+    } else {
+        // Insert order into the orders table
+        mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
+
+        // Deduct stock for each product
+        
+
+        // Clear the cart after placing the order
+        mysqli_query($conn, "DELETE FROM `cart` WHERE user_id='$user_id'") or die('query failed');
+        $message[] = 'Order placed successfully!';
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Razorpay Integration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+<?php @include 'header.php'; ?>
+
+<section class="heading">
+    <h3>checkout order</h3>
+    <h4 style="color:white; font-size: 20px;">First fill the details and click on "Order now", then click on "Pay with Razorpay"</h4>
+    <p><a href="home.php">home</a> / checkout</p>
+</section>
+
+<section class="display-order">
+    <?php
+    $grand_total = 0;
+    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id='$user_id'") or die('query failed');
+    if (mysqli_num_rows($select_cart) > 0) {
+        while ($fetch_cart = mysqli_fetch_assoc($select_cart)) {
+            $total_price = $fetch_cart['price'] * $fetch_cart['quantity'];
+            $grand_total += $total_price;
+            echo '<p>' . $fetch_cart['name'] . '<span> (Rs ' . $fetch_cart['price'] . ' x ' . $fetch_cart['quantity'] . ')</span></p>';
+        }
+    } else {
+        echo '<p class="empty">your cart is empty</p>';
+    }
+    ?>
+    <div class="grand-total">grand total : <span>Rs<?php echo $grand_total; ?>/-</span></div>
+</section>
+
+<section class="checkout">
+    <form action="" method="POST">
+        <h3>place your order</h3>
+        <div class="flex">
+            <div class="inputBox"><span>your name:</span><input type="text" name="name" required></div>
+            <div class="inputBox"><span>your number:</span><input type="number" name="number" required></div>
+            <div class="inputBox"><span>your email:</span><input type="email" name="email" required></div>
+            <div class="inputBox">
+                <span>payment method:</span>
+                <select name="method">
+                    <option value="online payment">Online Payment</option>
+                    <option value="cash on delivery">Cash on Delivery</option>
+                </select>
+            </div>
+            <div class="inputBox"><span>address line 01:</span><input type="text" name="flat" required></div>
+            <div class="inputBox"><span>address line 02:</span><input type="text" name="street" required></div>
+            <div class="inputBox"><span>city:</span><input type="text" name="city" required></div>
+            <div class="inputBox"><span>state:</span><input type="text" name="state" required></div>
+            <div class="inputBox"><span>country:</span><input type="text" name="country" required></div>
+            <div class="inputBox"><span>pin code:</span><input type="number" name="pin_code" required></div>
+        </div>
+
+        <input type="submit" name="order" value="order now" class="btn">
+        <button id="rzp-button" type="button" class="btn">Pay with Razorpay</button>
+    </form>
+</section>
+
+<?php @include 'footer.php'; ?>
+
+<script>
+document.getElementById('rzp-button').onclick = function (e) {
+    e.preventDefault();
+    const name = document.querySelector("input[name='name']").value;
+    const email = document.querySelector("input[name='email']").value;
+    const contact = document.querySelector("input[name='number']").value;
+
+    if (!name || !email || !contact) {
+        alert("Please fill all required fields before payment.");
+        return;
+    }
+
+    const options = {
+        "key": "rzp_test_Rfxy3am7lEol9k",
+        "amount": <?php echo $grand_total * 100; ?>,
+        "currency": "INR",
+        "name": "Your Store",
+        "description": "Order Payment",
+        "handler": function (response) {
+            alert("Payment successful!\nPayment ID: " + response.razorpay_payment_id);
+            document.querySelector("form").submit();
+        },
+        "prefill": {
+            "name": name,
+            "email": email,
+            "contact": contact
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+
+    const rzp1 = new Razorpay(options);
+    rzp1.open();
+};
+</script>
+
+</body>
+</html>

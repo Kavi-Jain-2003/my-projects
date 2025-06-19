@@ -1,0 +1,579 @@
+<html>
+<head>
+<title>CSSP</title>
+<style>
+#cars{padding:40px; background-color:lightblue; color:magenta; text-align:center;}
+#bikes{padding:50px; background-color:lightgreen; text-align:center;}
+
+table{border:5px solid red;}
+!table{border-collapse:collapse;}
+table{height:200px; width:200px; }
+th{height:100px; text-align:left; }
+td{height:100px; width:200px; vertical-align:bottom; padding:50px; margin:10px;}
+th,td{border-bottom:2px solid blue;}
+tr:hover{background-color:green;}
+table:hover{background-color:yellow;}
+td:hover{background-color:pink;}
+tr:nth-child(even){background-color:brown;}
+
+.fourth{background-color:blue; color:red;}
+div.first{opacity:0.1; background-color:blue; color:red;}
+.second{opacity:0.3; background-color:blue; color:red;}
+div.third{opacity:0.6; background-color:blue; color:red;}
+
+.overflow{background:red; width:300px; height:100px; border:3px dotted black;
+overflow:auto;}
+
+.float{float:right;}
+
+.pas{display:inline;}
+.un,.it,.bd{display:block;}
+
+.header{padding:10px; margin:10px; text-align:center; background-color:green;}
+
+ul{list-style-type:disc;}
+li,a{display:inline;}
+
+p.psuedo::first-line{color:green; font-size:20px;}
+p.psuedo::first-letter{color:yellow; font-size:50px;}
+
+h1.bpsuedo::before{content:URL("design 17.jpeg");  width:10px; height:10px;}
+h1.bpsuedo::after{content:" :: after the text";}
+
+div>p{background-color:yellow;}
+
+a[target:"blank"]{background-color:red;}
+
+body{counter-reset:"section";}
+h2::before{content:"sect"; counter(section); ":" counter-increament:"section";}
+</style>
+</head>
+<body>
+<p>Use CSS to style an element with the ID:</p>
+<h1 id="cars">CARS</h1>
+<h1 id="bikes">BIKES</h1>
+<h1 id="cars">FRUITS</h1>
+<h1 id="bikes">ANIMALS</h1>
+
+<a href="#imp">Important</a>
+<p id="top" style="text-align:left;">
+diegoirjgbhitoejbnogegjguiesgjoierhiyjrnbwojeorigjknmvo
+i ig igjoirjniocgjcpekkbewimfkqjojgderhgorndioefweoiwp
+ferigenviuehghrkkngiergidghniughierjghurenrgerjejtohte
+diegoirjgbhitoejbnogegjguiesgjoierhiyjrnbwojeorigjknmvo
+i ig igjoirjniocgjcpekkbewimfkqjojgderhgorndioefweoiwp
+ferigenviuehghrkkngiergidghniughierjghurenrgerjejtohte
+diegoirjgbhitoejbnogegjguiesgjoierhiyjrnbwojeorigjknmvo
+i ig igjoirjniocgjcpekkbewimfkqjojgderhgorndioefweoiwp
+ferigenviuehghrkkngiergidghniughierjghurenrgerjejtohte
+diegoirjgbhitoejbnogegjguiesgjoierhiyjrnbwojeorigjknmvo
+i ig igjoirjniocgjcpekkbewimfkqjojgderhgorndioefweoiwp
+ferigenviuehghrkkngiergidghniughierjghurenrgerjejtohte
+</p>
+<h3 id="imp">
+<b>ID attribute</b></h3>
+<p> it is very important  it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important it is very important</p>
+ifhwfjbvwieocnvbhjguiewolammcnvbhjgeruijkncvbjghruiodklmcnvfhgruolkmchirkehwoijkgneruiwopqproiuriefwd[ojjhgbvncmlodihfvbcnxm,kdfgiureowoksmxncbvfhdiwowieurygf</p>
+<br>
+<a href="#top">Back to the page</a>
+<br><br><br>
+
+<div style="background-color:red; width:300px; height:100px; position:relative; top:10px; left:80px; z-index:2;">
+</div>
+<div style="background-color:yellow; width:300px; height:100px; position:relative; top:-60px; left:35px; 
+z-index:1;">
+</div>
+<div style="background-color:green; width:300px; height:100px; position:relative; top:-230px; left:120px; 
+z-index:3;">
+</div>
+
+<div style="color:green; font-size:100;
+position:relative; top:10px; left:150px; z-index:3;">Layer1</div>
+
+<div style="color:red; font-size:100;
+position:relative; top:-60px; left:100px; z-index:2;">Layer2</div>
+
+<div style="color:yellow; font-size:100; position:relative; top:-130px; left:50px; z-index:1; ">Layer3</div>
+ 
+
+cwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruifgtbfevdnkgc
+wgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruifgtbfevdnkgiyfydkogtythiyfyd
+kogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby7
+8idhdr83iwjfvgryruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idh
+dr83iwjfvgryruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsv
+woakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruifgtbfevdnkgiyfydkogtythcwgt
+eygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+
+<div style="position:relative; left:50px; top:0px; background-color:yellow">
+this div has a relative positioning.
+</div>
+
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+
+<div style="position:absolute; left:50px; top:2000px; background-color:orange">
+this div has a absolute positioning.
+</div>
+
+
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+dr83iwjfv8idhdr83iwjfvgryeygbgjkigyge3fejgotuy7tfgoiyu8trhfjkgoiy7trfjgireytrdhjskirey
+ruifgtbfevdnkgiyfydkogtythcwgtyhsvnyufqifjnyrtyoiwkscvfdueiwadsvwoakcnvguewiadksbfrie8dsvcby78idhdr83iwjfvgryruif
+gtbfevdnkgiyfydkogtyth
+
+
+
+<div style="position:fixd; left:50px; top:500px; background-color:red">
+this div has a fixed positioning.
+</div>
+
+<h2 onmousemove="style.color=red"
+onmouseout="style.color=black">
+Hover here!
+</h2>
+<hr>
+<hr>
+<h1>this is a heading</h1>
+<p>fhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxgfhgfdsxcvbngfdsdfghhgfdbvcxg   <p align="center">njvrirhffvbjgtureijsnvbguiiiiiiiiiiierrrrrrrvjdrefhudjnc bfhjerfdjknxcbffnjvrirhffvbjgtur
+eijsnvbguiiiiiiiiiiierrrrrrrvjdrefhudjncbfhjerfdjknxcvbffnjvrirhffvbjgtureijsnvbguiiiiiiiiiiierrrrrrrvjdrefhudjnc
+bfhjerfdjknxcvbffnjvrirhffvbjgtureijsnvbguiiiiiiiiiiierrrrrrrvjdrefhudjnc bfhjerfdjknxc vbff</p>
+<pre><b><i><u><title>preee</title>jhwfyuwudaj34567675643ncvbfhueodlmvnbgrhfj</u></i></b></pre>
+
+<h1>list</h1>
+<ul type="circle">
+<li>html</li>
+<li>css</li>
+<li>xml</li>
+</ul>
+
+<ol type="1" start="3">
+<li>html</li>
+<li>java</li>
+<li value="7">css</li>
+<li>xml</li>
+</ol>
+
+<dl><ul>
+<li><dt>wine</dt></li>
+<dd>black hot drink</dd>
+<li><dt>milk</dt></li>
+<dd>white cold drink</dd>
+</ul></dl>
+
+<ol type="1">
+<li>Up</li>
+<ul><li>lucknow</li></ul>
+<li>rajasthan</li>
+<ul><li>jaipur</li></ul>
+<li>mp</li>
+<ul><li>bhopal</li></ul>
+</ol>
+
+<ol type="1">
+<li value="5">up</li>
+<ul><li>lucknow</li></ul>
+<li value="7">rajasthan</li>
+<ul><li>jaipur</li></ul>
+<li value="9">mp</li>
+<ul><li>bhopal</li></ul>
+</ol>
+
+<h2>by definition list</h2>
+<ol>
+<dl>
+<li value="5"><dt>up</dt></li>
+<dd>lucknow</dd>
+<li value="7"><dt>rajathan</dt></li>
+<dd>jaipur</dd>
+<li vlaue="9"><dt>mp</dt></li>
+<dd>bhopal</dd>
+</dt>
+</ol>
+<h3>Table with cellspacing and cellpadding</h3>
+<table border="5"; cellspacing="6"; cellpadding="6";>
+<tr>
+<th>NAME</th>
+<th>AGE</th>
+</tr>
+<tr>
+<td>ram</td>
+<td>22</td>
+</tr>
+<tr>
+<td>shyam</td>
+<td>25</td>
+</tr>
+<tr>
+<td>mohan</td>
+<td>28</td>
+</tr>
+<tr>
+<td>rohan</td>
+<td>23</td>
+</tr>
+</table>
+
+<h3>Table with rowspan and colspan</h3>
+<table border="1">
+<tr><th>Month</th>
+<th>Saving</th>
+</tr>
+<tr>
+<td>January</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Feburary</td>
+<td>2000</td>
+</tr>
+<tr>
+<td colspan="3">sum:3000</td>
+</tr>
+</table>
+
+<br><Br>
+
+<table border="1">
+<tr><th>Month</th>
+<th>Saving</th>
+<td rowspan="3">sum:3000</td>
+</tr>
+<tr>
+<td>January</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Feburary</td>
+<td>2000</td>
+</tr>
+</table>
+<br><br>
+
+<table border="4"; width="300px"; height="300px";>
+<tr>
+<th rowspan="2">Name</th>
+<th colspan="3">Marks</th>
+</tr>
+<tr>
+<th>css</th>
+<th>html</th>
+<th>xml</th>
+</tr>
+<tr>
+<td>ram</td>
+<td>20</td>
+<td>45</td>
+<td>30</td>
+</tr>
+<tr>
+<td>shyam</td>
+<td>20</td>
+<td>45</td>
+<td>30</td>
+</tr>
+</table>
+<br><br>
+<form>
+<fieldset>
+<center><b><u>FORM</u></b></center><br>
+<label for="name">Name:</label>
+<input type="name" name="name">
+<br><br>
+<label for="e-mail">E-mail:</label>
+<input type="text" name="e-mail">
+<br><br>
+<label for="user_password">Password</label>
+<input type="password" name="user_password" id="user_password">
+<br><br>
+Select Gender:<br>
+<label for="male">Male</label>
+<input type="radio" name="gender" id="male">
+<label for="female">Female</label>
+<input type="radio" name="gender" id="female">
+<br><br>
+Select Subject:<br>
+<label for="html">HTML</label>
+<input type="checkbox" name="subject" id="html">
+<label for="css">CSS</label>
+<input type="checkbox" name="subject" id="css">
+<label for="xml">XML</label>
+<input type="checkbox" name="subject" id="xml">
+<br><br>
+<label for="country">COUNTRY</label>
+<select name="country" id="country">
+<option value="india">INDIA</option>
+<option>SRI LANKA</option>
+<option value="australia">AUSTRALIA</option>
+<br><br>
+<input type="submit" value="submit">
+</fieldset>
+</form>
+<br>
+<form>
+<fieldset>
+<legend>User Information</legend>
+E-mail:
+<input type="text" name="email" id="email">
+<br><br>
+Gender:
+<label for="male">Male</label>
+<input type="radio"  name="gender" id="male">
+<label for="female">Female</label>
+<input type="radio" name="gender" id="female">
+<br><br>
+Enter name:
+<br>
+<input type="text" name="name" id="name">
+<br><br>
+Enter password:
+<br>
+<input type="text" name="password" id="password">
+<br><br>
+Hobby:
+<br>
+<label for="cricket">Cricket</label>
+<input type="checkbox" name="hobby" id="cricket"><br>
+<label for="football">Football</label>
+<input type="checkbox" name="hobby" id="football"><br>
+<label for="hockey">Hockey</label>
+<input type="checkbox" name="hobby" id="hockey"><br>
+<br>
+Enter address:
+<textarea row="8" column="10"></textarea>
+<br><br>
+<input type="submit" value="SUBMIT">
+<input type="reset" value="RESET">
+<br><br>
+<label for="file">Upload file</label>
+<input type="file" name="file" id="file">
+</fieldset>
+</form>
+<br>
+<a href="www.google.com" target="_blank">THIS LINK</a>
+<br>
+
+<ul><h3><u>These all are types of phrase tag:-</u></h3>
+<li>Var- helps in making variables in italic form.<br>
+<var>(a+b)<sup>2</sup>=a<sup>2</sup>+b<sup>2</sup>+2ab</var></li>
+<br>
+<li>Samp- is used to definethe sample output text.
+<br>
+<samp>kghoerigknvnkljf9876</samp>
+fdhrnfgg</li>
+<br>
+<li>Kbd tag -is used to define keyboard input
+<br>
+<kbd>chgifiowdkcvbg<html></kbd></li>
+<br>
+<li>Code tag- used to display the computer code on the website
+<br>
+<code>iurr3kdnvfjbhiowdcnvbofr</code></li>
+<br>
+<li>Pre tag-it is used to follow the exact format of how it is written in HTML document
+<pre>diugvne2kldofvubhvre</pre></li>
+</ul>
+
+<h2>Css box model</h2>
+<style>
+#boxs{padding:100px; width:200px; height:100px; border:10px solid red; margin:20px; text-align:center;  font-size:32px;}
+.boxes{height:200px; width:200px;  position:relative; bottom:40px;}
+</style>
+<div id="boxs"><img src="C:\Users\acer\Pictures\Camera Roll\1.jpg" class="boxes"></div>
+
+<h2>Css outlines</h2>
+<style>
+.container{bgcolor="pink"; outline:10px outset red;  border:20px solid yellow; height:100px; width:300px; padding:10px;
+text-align:center; font-size:30px;}
+</style>
+<div class="container">hello world</div>
+<br>
+<h2>Css links</h2>
+<style>
+a:link{color:red;}
+a:visited{color:green;}
+a:hover{color:yellow;}
+a:active{color:blue;}
+
+</style>
+<a href="www.google.com" target="blank">CLICK ME</a>
+<h2>Css Positioning</h2>
+<h4>ul outside</h4>
+<ul style="list-style-type:circle; list-style-position:outside; ">
+<li>Math</li>
+<li>HTML</li>
+<li>Science</li>
+</ul>
+<br>
+<h4>ul inside</h4>
+<ul style="list-style-type:square; list-style-position:inside; ">
+<li>Math</li>
+<li>HTML</li>
+<li>Science</li>
+</ul>
+<br>
+<h4>ol outside</h4>
+<ol style="list-style-type:1; list-style-position:outside; ">
+<li>Math</li>
+<li>HTML</li>
+<li>Science</li>
+</ol>
+<br>
+<h4>ol inside</h4>
+<ol style="list-style-type:1; list-style-position:inside; ">
+<li>Math</li>
+<li>HTML</li>
+<li>Science</li>
+</ol>
+<br>
+<h2>CSS Tables</h2>
+<table border="1">
+<tr>
+<th>name</th>
+<th>class</th>
+<th>Section</th>
+</tr>
+<tr>
+<td>charlie</td>
+<td>11th</td>
+<td>B</td>
+</tr>
+<tr>
+<td>joseph</td>
+<td>12th</td>
+<td>A</td>
+</tr>
+</table>
+<ul>
+<li>pink=td hover</li>
+<li>green=tr hover</li>
+<li>yellow=table hover</li>
+<li>brown=nth-child(even)</li>
+<li>blue=horizontal divider</li>
+<li>red=table border</li>
+</ul>
+<hr>
+<h2>Opacity</h2>
+It describes the level of transparency
+<div class="first">opacity 0.1</div>
+<div class="second">opacity 0.3</div>
+<div class="third">opacity 0.6</div>
+<div class="fourth">opacity 1</div>
+<hr>
+<h2><u>CSS display property</u></h2>
+<h4><u>display:inline</u></h4>
+<p class="pas">para1</p>
+<p class="pas">para2</p>
+<p class="pas">para3</p>
+<p class="pas">para4</p>
+<hr>
+<h4><u>display:block</u></h4>
+<u class="un">underline</u><i class="it">italice</i><b class="bd">bold</b>
+<hr>
+<p style="font-family:arial;  font-style:italic; font-size:40px; font-weight:900; font-varient:small-caps;">paragraph paragraph paragraph AAAA paragraph</p>
+<p  style="font-varient:small-caps;">varient</p>
+<hr>
+<h2><u>Overflow</u></h2>
+<h3><u>Overflow:visible/hidden/scroll/auto;</u></h3>
+<div class="overflow"><p>cfyuhsxjnkvfhugdhsxncdfijufghxbsmjkifugfdhs
+cdsvbgyiueocjn vbghud
+sdfhgydjvbhgfo
+djvfgyuojcsh vedi
+sdcbfgdioxjshgfedijdgyuidjhfvgy
+dfvbgredsjkfgyueijshdgfrduhwsjgf
+lfvhyfudijkhvdgyuidjdbvfgyudijkhvffe
+sdcvfgyuoddjchvgyuiedjksdvbfyudijhfvyedij
+fhuidjksdhfgyeio</p>
+</div>
+<br>
+<h2><u>Float</u></h2>
+<div class="float"><img src="C:\Users\acer\Pictures\Camera Roll\1.jpg" width="200px" height="100px"></div>
+cvhgfuidjksncbhhdisxkjcfguhds
+sxkdchfiodklcbvhguidejkcv
+xcdjksncbhhdisxkjcfguhds
+sxkdchfiodklcbvhguidejkcv
+xcjvdfhgfdeklsvfuijdkxsn vfhi
+[FGHUIOPDCLKMVGHUFODPCKJV
+lkcvgifodksmdbf
+vhgfuidjksncbhhdisxkjcfguhds
+sxkdchfiodklcbvhguidkytgfhjkoi9uyghjkloiuyghjiouytejkcv
+xKMVGHUFODPCKJoigiuhvfkfpovgbV
+lkcvgifodksmdbfhujcdlpo
+cfvgbhtipdcflkvbghufkocdf
+<div class="header">
+<h1> srk college</h1>
+</div>
+<div class="nav">
+<ul>
+<li><a href="###">home</a></li>
+<li><a href="###">about</a></li>
+</ul>
+</div>
+
+<p class="psuedo">first line of paragraph<br>
+jvkojieruhbijkeoirgtuh
+bhgrfiojvbghutgrfeojvbhtguf9eodkf
+gfruivjgbhutgr8fiojvbhug
+gbhg859ioewjfg98eorfnv
+bug8oedkjfhbutgu90rioefgh8utroe
+bhg8u49roefjghti8u4r93oekjfghutrioe
+fig85u43powdjfghu84r3ow]
+igu4tr390wopjefgruhvjknmmx
+dfghuru93epwldkfrggubd</p>
+<h1 class="bpsuedo">smiley</h1>
+<div>
+<p>aaaaaaaaaaaaaaaaaaaaaaa</p>
+<p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+<section><p>ccccccccccccccccccccccc</p>
+</section>
+</div>
+<p>dddddddddddddddddddddddddd</p>
+<p>eeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
+<h2> html</h2>
+<h2>css</h2>
+<h2>xml</h2>
+</body>
+</html>

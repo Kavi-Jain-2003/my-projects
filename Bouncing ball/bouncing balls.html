@@ -1,0 +1,76 @@
+9:16 PM 26-Aug-21
+<html>
+<head>
+<title>CSS bouncing ball animations</title>
+<style>
+*
+{
+margin:0;
+padding:0;
+}
+div
+{
+border:30px solid magenta;
+background-color:black;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+div ul 
+{
+display:flex;
+border-bottom:10px solid white;
+}
+div ul li
+{
+background-color:black;
+width:50px;
+height:50px;
+list-style:none;
+margin:0 10px;
+border-radius:50%;
+animation: bouncy 1s linear infinite;
+}
+@keyframes bouncy
+{
+0%{transform:translateY(0);}
+50%{transform:translateY(-150px);}
+100%{transform:translateY(0);}
+}
+ul li:nth-child(1)
+{
+animation-delay:0.2s;
+background-color:#FF1BF5;
+}
+ul li:nth-child(2)
+{
+animation-delay:0.4s;
+background-color:#FBFF00;
+}
+ul li:nth-child(3)
+{
+animation-delay:0.6s;
+background-color:#2BFFE9;
+}
+ul li:nth-child(4)
+{
+animation-delay:0.8s;
+background-color:#19FF02;
+}
+ul li:nth-child(5)
+{
+animation-delay:0.99s;
+background-color:#FF5C6E;
+}
+</style>
+</head>
+<body>
+<div><ul><li>
+<li>
+<li>
+<li>
+<li>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Task Form</title>
+</head>
+<body>
+<div class="container"><form>
+<div class="main_heading"><h1>CONTACT FORM</h1>
+Please fill all the text in the fields.</div>
+<p>Your Name:<input type="text" name="name" placeholder="Your full name"></p>
+<p> Your Email:<input type="email" name="email" id="email" placeholder="Valid Email Address" ></p>
+<p>Message:<textarea name="message" cols="20" rows="5" placeholder="Your Message To us"></textarea></p>
+<p>Subject:<input type="text" name="Subject" placeholder="Job Inquiry"></p>
+<input type="submit" value="Send">
+</form>
+
+<style>
+body{margin:0px;
+padding:0px; 
+display:flex;
+justify-content:center;
+align-items:center;
+width:100vh;}
+
+.main_heading{
+color:white;
+border:none;
+padding:5px;
+background-color: lightgreen;
+margin:0px;
+width:100%;}
+
+input[type="submit"]{
+background-color:lightgreen;
+color:white;  padding:12px 20px;  border:none; cursor:pointer; }
+
+input[type="text"],
+input[type="email"],
+textarea{width:100%;  padding:12px;
+border:none;  border-radius:5px; }
+
+.container{background-color:#f2f2f2;
+width:500px; height:550px; padding:1px 10px 10px 10px;  border-radius:8px; border:none;
+}
+
+body{background-color:pink;}
+</style>
+</body>
+</html>

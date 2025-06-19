@@ -1,0 +1,87 @@
+body{
+background:purple;
+margin:0px;
+padding:0px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.heading{
+margin:0px;
+padding:0px;
+color:yellow;
+font-size:45px;
+position:absolute;
+top:2px;
+width:100%;
+}
+.container{
+margin:0px;
+padding:0px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.emoji{
+height:300px;
+width:300px;
+background-image:radial-gradient(#feca3e 58%,#ff8000  80%);
+border-radius:50%;
+position:absolute;
+overflow:hidden;
+box-shadow:30px 30px 35px rgba(0,0,0,0.7);
+}
+.emoji:before, .emoji:after{
+content:"";
+height:45px;
+width:32px;
+background:#663d0f;
+position:absolute;
+top:90px;   
+border-radius:50%;
+box-shadow:0 -6px #4f2e08;
+}
+.emoji:before{
+left:80px;
+}
+.emoji:after{
+right:80px;
+}
+.mask{
+height:120px;
+width:220px;
+background:#bef4f1;
+position:absolute;
+margin:auto;
+left:0;
+right:0;
+bottom:30px;
+border-radius:5px 5px 50% 50%;
+}
+.mask:before, .mask:after{
+content:"";
+width:300px;
+height:10px;
+background:#bef4f1;
+position:absolute;
+}
+.mask:before{
+transform:rotate(-20deg);
+right:-51px;  top:30px;
+}
+.mask:after{
+transform:rotate(20deg);
+left:-51px;  top:30px;
+}
+.details{
+height:15px;
+width:180px;
+background:#e9fbaf;
+position:absolute;
+margin:auto;
+left:0;  right:0;
+top:20px;
+z-index:2;
+border-radius:0 0 50% 50%;
+box-shadow:0px 25px #e9fbaf, 0px 50px #e9fbaf;
+}

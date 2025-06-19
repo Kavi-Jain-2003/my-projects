@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Water Wave</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:black;}
+.water h2{
+position:absolute;
+transform:translate(-50%,-50%);
+font-size:300px;
+}
+.water h2:nth-child(1){
+color:transparent;
+-webkit-text-stroke:3px #69C6FF;
+}
+.water h2:nth-child(2){
+color:#69C6FF;
+animation:waterflow 3s ease-in-out infinite;
+}
+@keyframes waterflow{
+0%,100%{clip-path:polygon(0 18%, 16% 27%, 30% 41%, 39% 51%, 51% 55%, 63% 54%, 78% 50%, 92% 43%, 100% 42%, 100% 100%, 0% 100%);}
+
+50%{clip-path:polygon(0 58%, 16% 49%, 31% 45%, 44% 39%, 59% 34%, 71% 38%, 79% 46%, 90% 48%, 100% 57%, 100% 100%, 0% 100%);}
+}
+
+</style>
+</head>
+<body>
+<div class="water">
+<h2>Water</h2>
+<h2>Water</h2>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Flex</title>
+</head>
+<body>
+<div class="flex-container">
+<div class="flex-item"  id="flex-item-1">1</div>
+<div class="flex-item"  id="flex-item-2">2</div>
+<div class="flex-item"  id="flex-item-3">3</div>
+<div class="flex-item"  id="flex-item-4">4</div>
+<div class="flex-item"  id="flex-item-5">5</div>
+</div>
+<style>
+body{font-family:Arial, sans-serif;
+font-size:30px;
+padding:0 20px 30px 0;
+line-height:1.4;
+}
+.flex-container{display:flex;
+}
+.flex-item{width:75px;  height:75px; background:blue; border:2px solid darkblue; text-align:center; font-size:2em; color:white; font-weight:bold;  line-height:1.4; 
+ align-self:flex-end;}
+#flex-item-1{background:lightpink; flex-basis:200px;}
+#flex-item-2{background:skyblue; flex-grow:2;}
+#flex-item-3{background:lightgreen; flex-shrink:4;}
+#flex-item-4{background:darkkhaki;}
+#flex-item-5{background:lightcoral; flex:32 250px;}
+</style>
+</body>
+</html>

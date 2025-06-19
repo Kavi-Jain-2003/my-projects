@@ -1,0 +1,29 @@
+body
+{
+background-color:aqua;
+}
+.road{border-bottom:10px dashed white;}
+.man{background:url(man.png);
+width:155px;
+height:150px;
+animation:walk 1s steps(6) infinite, 
+forward 5s linear infinite;
+}
+@keyframes walk
+{
+0%{
+background-position:0px;}
+100%
+{
+background-position:950px;}
+}
+@keyframes forward{
+0%
+{
+transform:translatex(-100px);}
+100%{
+transform:translatex(1300px);}
+}
+
+
+

@@ -1,0 +1,86 @@
+body{margin:0px;
+padding:0px;
+background-color:#586c92;
+}
+.main{
+height:450px; width:400px;
+background:#586c92;
+position:absolute;
+margin:auto;
+left:0px; top:0px;
+right:0px; bottom:0px;
+transform:rotate(10deg);
+animation:move 4s infinite;
+}
+@keyframes move{
+50%{transform:rotate(-10deg);}
+}
+.santa{
+position:relative;
+top:165px;
+left:95px;
+}
+.beard{
+background:white;
+height:220px;
+width:220px;
+border-radius:0 50% 50% 50%;
+transform:rotate(-135deg);
+}
+.face{
+background:#fbd1b6;
+height:60px;  width:155px;
+position:relative;
+bottom:180px; left:31px;
+border-radius:35px;
+}
+.hat{
+background:#ff1e4c;
+height:150px;  width:150px;
+position:relative;
+bottom:420px;
+left:35px;
+border-radius:0 200px 0 0;
+}
+.top{
+background-color:white;
+width:35px; height:35px;
+position:relative;
+right:35px; 
+bottom:70px;
+border-radius:50%;
+}
+.bottom{
+background:white;
+height:50px;  width:200px;
+position:relative;
+border-radius:20px;
+top:140px;   right:25px;
+} 
+.eye1, .eye2{
+height:15px;  width:30px;
+border-top:8px solid #262626;
+border-radius:30px 30px 0 0;
+position:relative;
+}
+.eye1{
+left:32px; top:20px;
+}
+.eye2{
+left:92px; bottom:3px;
+}
+.nose{
+background-color:#fbd1b6;
+height:30px; width:35px;
+border-radius:50%;
+position:relative;
+left:60px;
+}
+.mouth{
+background:#262626;
+height:20px; width:40px;
+border-radius:0 0 20px 20px;
+position:relative;
+top:3px; left:57px;
+
+}

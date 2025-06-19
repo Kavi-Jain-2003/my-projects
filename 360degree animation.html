@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>360degree animation</title>
+<style>
+*{margin:0px; padding:0px; box-sizing:border-box;
+background:green;}
+div{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+h1{
+font-size:150px;
+background:linear-gradient(yellow,red);
+}
+h1:hover{
+animation:flip 1.5s linear infinite;
+}
+@keyframes flip{
+50%{transform:rotateY(90deg);}
+}
+</style>
+</head>
+<body>
+<div>
+<h1>MADAM</h1>
+</div>
+</body>
+</html>

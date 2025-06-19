@@ -1,0 +1,581 @@
+<html>
+<head>
+<title>CSS IN WD</title>
+</head>
+<body>
+<h1>CSS{Cascading Style Sheet}</h1>
+<ul type="square"><li><h3><b>To import CSS in HTML internally:</b></h3></li>
+<style>h2{color:brown;}</style>
+:-Having brown color in heading level 2.
+<li><h3>Types of selectors</h3></li>
+<ul><u><ol><li><b>Type Selector:</b></li></u>
+<style>h1{color:green}</style>
+:-It is used in headings
+<ul><li><h1>Peaceful Beauty</h1></li>
+<li><h2>Peaceful Beauty</h2></li></ul>
+<u><li><b>Universal Selector:</b></li></u>
+<style>*{color:#bcd112; font-weight:bold; font-size:18px;}</style>
+:-It is used to format the whole text of HTML page in purple color
+<u><li><b>Class Selector:</b></li></u>
+<style>.CSS{color:yellow;}</style>
+:-It is used in formating a particular class.It does not works here******<br>
+<u><li><b>Attribute Selector:</b></li></u>
+<style>a[href=""http://www.google.com"]
+{color:yellow;}</style>
+:-It is used to format any link.It does not works here******
+<li><b><u>Adjacent combinator</li></b></u>
+:-it is used in formatting the adjacent text. It does not works here**** 
+<u><li><b>Psuedo Element:</b></li></u>
+<style>p::first-line{color:pink;}</style>
+:-It is used to format the first line of any paragraph in pink color
+<u><li><b>Combined Selector:</b></li></u>
+<style>p{color:#487;}</style>
+:-It is used to format the whole paragraph in #487 color
+<p>sduwhfncsygfnedbdiwflaknckjjgsdfirzjiufndcshjiuehfc,znsihsk  kqhfncskhlamchuehrownfishofjlffoiefncsihfoimsfih diehfnuehfwfsvnefiwfbefwefnsovjofwjfsov oiefnvisoejfonfsodjoij oiewjn
+mopjfkmfoefjiweefjsifjew akjefhiacnkew
+sduwhfncsygfnedbdiwflaknckjjgsdfirzjiufndcshjiuehfc,znsihsk  kqhfncskhlamchuehrownfishofjlffoiefncsihfoimsfih diehfnuehfwfsvnefiwfbefwefnsovjofwjfsov oiefnvisoejfonfsodjoij oiewjn
+mopjfkmfoefjiweefjsifjew akjefhiacnkew</p><br>
+<li><b><u>Descendant combinator</u></b></li>:
+<style>li em{color:blue;}</style>
+:-It helps in formatting the em tag present in list 1 in blue color<br>
+<fieldset><legend>LIST 1</legend><ul>
+<li>item one</li>
+<li>class=special</li>
+<li>item <em>three</em></li></ul></fieldset><br>
+<li><b><u>List Selector:</b></u></li>
+<style>li{list-style-type:square;}</style>
+:-It is used to format the bullets of list in square or to remove the bullets by 'none'<br>
+It is also used to format the particular class present in the listby increasingits size by 200%, coloring it by olive or blue
+<fieldset><legend>List 2</legend>
+<ul><li>item 1</li>
+<li class="a"> item name2</li>
+<li class="a b">item 3</li>
+<li class="ab">item 4</li></ul></fieldset>
+<style>li[class]{font-size:200%;}</style>
+<style>li[class="a"]{color:olive;}</style>
+<style>li[class="ab"]{color:blue;}</style>
+<br>
+<u><li><b>Anchor Selector:</b></li></u>
+:-It is used to format the link in red color
+<style>a{color:red;}</style>
+<li><b><u>Psuedo class for buttons</li></b></u>
+:-At the time when your pointer hovers or reaches to any link , its color gets converted into yellow
+<style>a:hover{color:yellow;}</style><br>
+<a href="Documents:\Kavi Jain Trading Company.docx" target="blank">Trading company</a><br>
+<a href="http://www.google.com" target="blank">Google</a><br>
+<li><b><u>ID selector</li></b></u>
+:-it is used in formatting the heading(in aqua color) having a particular id name
+<h1 id="heading">ID</h1>
+<style>#heading{ color:aqua; }</style>
+<h4 id="special">ID</h4>
+<style>#special{ color:yellow; }</style></ul>
+<li><h2>PROPERTY OF CSS</h2></li>
+<ul><li><b><u>COLOR:</u></b></li>
+:-It is used in coloring the text, background, border etc.
+<h3>this is a heading no. 3</h3>
+<style>h3{color:#eef139;}</style>
+<p id="unique">Paragraph is group of sentences;feghrucnklwegrf
+dfjweuyhjcnkifodghurs
+dajwufiyegdbvfnkijgtwr
+c jhgyfd8uiojknjdgiho</p>
+<style>#unique{color:#53da75);}</style>
+<li><b><u>FOR BACKGROUND:</u></b></li><br>
+<ol type="1."><li><b><u>BACKGROUND IMAGE:</u></b></li>
+:-we can set any image as a background.It does not work here*****
+<li><b><u>BACKGROUND REPEAT:</u></b></li>
+:-background image can be repeat in different directions like x-axis, y-axis or none.It does not work here*****
+<li><b><u>BACKGROUND-POSITION:</u></b></li>
+:-background image can be set in left,right,bottom or in centre.It does not work here*****
+<li><b><u>BACKGROUND-COLOR:</u></b></li>
+:-to set the color to the background of the text
+<h4>Here is the background color</h4>
+<style>h4{background-color:coral;}</style></ol>
+<li><b><u>FONT FAMILY:</u></b></li><br>
+<ul><li>font-family</li>
+<li>font-size</li>
+<li>font-weight</li>
+<li>font-style</li>
+<style>h5{font-size:44px;
+font-family:algerian; font-style:inherit; font-weight:1000; }</style></ul>
+<h5>HTML </h5>
+<li><b><u>TEXT FAMILY:</u></b></li>
+<ol type="a"><li>text-align</li>
+<li>text-transform</li>
+<li>line-height</li>
+<li>text-color</li>
+<li>text-indent</li></ol>
+<h6><b>THE NIGHT KING</b></h6>
+<p>l;djleriogjiyghsjnkdloewyrhbjdnkdoiefwrg
+slwjetifjndcsalwdieegrhndcsaoeiwf
+eghrncsalkworigewyueirtopjghlkdhs
+gaavsbmvb,bdfvbdjsqoieyrgfc
+uiiuytrhfsbvsuewgniggfdugreikdhgdmv drey
+hsjvnd  igiuhi     eghdjwisnurgd
+ffrihxfndfiugnvshefnkwewoef</p>
+<style>p{color:violet;
+line-height:2;
+font-weight:1000;
+text-indent:10px;
+word-spacing:20;}
+h6{font-size:20px;
+text-transform:lowercase;
+text-decoration:algerian;
+text-shadow:5px 5px 3px black;
+text-align:center;}</style></ul><br>
+<li><h2>BOX MODEL</h2></li>
+It consists of margin, border, padding, content area.
+<div class="model">dbfgcxciuyrwhed nsdgiusdn grueksbretguikn urinvui ireohugerewojhgrie iorhjtreworpughriepet dbfgcxciuyrwhed nsdgiusdn grueksbretguikn urinvui ireohugerewojhgrie iorhjtreworpughriepet dbfgcxciuyrwhed nsdgiusdn grueksbretguikn urinvui ireohugerewojhgrie iorhjtreworpughriepet</div>
+<style>.model{
+width:300px;
+height:210px;
+padding:50px;
+border:10px solid black;
+margin:10px;
+}</style>
+<li><u><b>Margin vs Padding</b></u></li>
+<div class="box1">Hello! myslef margin</div>
+<div class="box2">Hello! myslef padding</div>
+<style>
+.box1{margin:30px;  background-color:aqua; height:100px;
+width:100px; border:5px solid yellow;}
+.box2{padding:40px;  background-color:#999; height:100px;
+width:100px; border:5px solid yellow;}</style><br>
+<li><h2>STYLING</h2></li>
+<ul><li><b><u>Styling bullets</u></b></li>
+Following points doess not work here******
+<ol><li>list-style-type:</li>
+-it is used in styling the bullets in disc, square, roman etc.
+<li>list-style-position:</li>
+-it is used to select the bullets along with text or seperately.
+<li>list-style-image</li>
+-it is used to add any image in the place of bullets.</ol>
+<style>{list-style-type:roman;
+list-style-position:outside;}</style>
+<fieldset><legend>List 3</legend>
+<ul><li>Tea</li><li>Espresso</li><li>Americano</li><li>Latte</li><li>Cappuccino</li><li>Hot Chocolate</li></ul></fieldset><br>
+<style>nav a{background-color:black;
+text-decoration:none;
+color:black;
+overflow:hidden;
+text-align:centre;
+padding:20px;
+float:left;
+}</style>
+<a href="http://www.amazon.com" target="blank">amazon</a>
+<style>a:visited{color:royalblue;}</style><br><br>
+<li><b><u>Styling tables</u></b></li>
+<li>table border</li>
+<li>seperate border</li>
+<li>collapse border</li>
+<li>borders-spacing</li><br>
+<table border="5"><thead>
+<tr><th>Customer no.</th>
+<th>Name</th>
+<th>Occupation</th>
+<th>Gender</th>
+</tr></thead>
+<tbody><tr><td>101</td>
+<td>Bill</td><td>Software Engineer</td>
+<td>Male</td></tr>
+<tr><td>102</td><td>Donald</td><td>Football player</td><td>Male</td></tr>
+<tr><td>103</td><td>Elsa</td><td>Teacher</td><td>Female</td></tr></tbody>
+</table>
+<style>table,th,td {border:1px solid black;
+border-collapse:seperate;
+}
+th,td{padding:15px;}
+th{background-color:coral;}
+td{background-color:royalblue;}
+</style><br>
+<li><h2>Cascading, Specificity, Inheritance</h2></li>
+<li><b><u>Cascading</b></u></li>
+:-it means that if two edittings are done for h1, then the 2nd one will run, 1st one will get override.
+<h3>It is cascading</h3>
+<style>h3{color:blue;}
+h3{color:magenta;}</style>
+:-You can see the magenta color in above h3 in place of blue and #eef139
+<br><br>
+<li><b><u>Specificity</u></b></li>
+:-It decides the priority , which will come first<br><br>
+<ul id="summer-drinks">
+<li>Mountain Dew</li>
+<li class="drink">sprite</li>
+<li>Thumbs up</li></ul><br>
+<style>.drink{color:red;}
+.drink{color:green;}
+</style>:- you can see the green color in place of purple
+<br><br>
+<li><b><u>Inheritance:</u></b></li>
+:-parent and child will follow the same properties.It does not work here*****<br><br>
+<li><b><u>Controlling the Inheritence:</b></u></li><br>
+<ul><li class="class">Default<a href="">Link</a>color</li>
+:-we can set thecolor for the default link
+<li class="class-1">Inherit<a href="">Link</a>color</li>
+:- by defaultinherit provides theblur=e color for the link
+<li class="class-2">Initial<a href="">Link</a> color</li>
+:-By default, initial link provides black color for the link
+<li class="class-3">Unset<a href="">Link</a>color</li></ul>
+:-By default, unset link provides the same color of the body for the link
+<style>.class a{color:brown;}</style>
+<style>.class-1 a{color:inherited;}</style>
+<style>.class-2 a{color:initial;}</style>
+<style>.class-3 a{color:unset;}</style>
+<li><h2>Specificity order:(!important)</h2></li>
+:it is having the highest specificity rank
+<ol><li><h4>Specificity</h4></li>
+<style>h4{color:blue;}
+
+h4{color:black !important;}</style>
+:-you can see that black replaces blue color
+<li><p>this is a blue color
+hewiopkdhfgrhfdnmsaleuy5erhadmldkoweuty5ghrjkm
+oreguthjkdwewfihgterkdieught
+;jhyriejacnvfdhjuejxsnhcbhfuediskjxcnvfhdik
+dlkjsuyrfdwj
+defrey7yeuijk</p>
+<style>p{color:yellow;}
+p{color:blue !important;}</style>
+:-you can see that in paragraph blue color overreides red & yellow color</li></ol>
+
+<li><h2>Overflowing</h2></li>
+<div class="boxes">dwiehrjfdusgfjwuegfgwfbb 
+bcsiufhw
+hehuwehn cuyewnudfwm 
+idweh cwuhfwuehsdjfhwijnsnbuygrwndasmqe
+jciurfhcuhgfeurfc uhfuycsdnifwhefugwb
+wewheweuhuwdh\d\
+iewhewnfiwehf
+hdiwhn</div>
+<style>.boxes{border:5px solid black;
+width:200px;
+height:100px;
+padding:5px;}</style><br><br>
+<div class="word"><b>Overflow</b></div>
+<style>.word{border:10px solid blue;
+width:50px;
+height:50px;
+padding:5px;
+font-size:40px;
+font-family:algerian;
+font-weight:100;}</style>
+:-you can see the overflowing of the text
+
+<li><h2>To Control The Overflowing</h2></li>
+
+<ol><li>Overflow:hidden;</li>
+<div class="container"><img src="D:\designs\design 2.png" height="300px"; width="300px"; margin:0px; padding:0px;></div>
+<style>.container{border:10px solid black;
+width:200px;
+height:200px;
+overflow:hidden;}</style><br>
+
+<li>Overflow:scroll;</li>
+<div class="boxes">dwiehrjfdusgfjwuegfgwfbbbcsiufhw
+hehuwehn cuyewnudfwm 
+idweh cwuhfwuehsdjfhwijnsnbuygrwndasmqe
+jciurfhcuhgfeurfc uhfuycsdnifwhefugwbwewheweuhuwdh\d\
+iewhewnfiwehf
+hdiwhn</div>
+<style>.boxes{border:5px solid black;
+width:200px;
+height:100px;
+padding:10px; Overflow:scroll;}</style><br>
+
+<li>Overflow:visible;</li>
+<div class="words"><b>Overflow
+</b></div>
+<style>.words{border:10px solid blue;
+width:100px;
+height:50px;
+padding:5px;
+font-size:40px;
+font-family:algerian;
+font-weight:100;  Overflow:visible;}</style><br>
+
+<li>Overflow:auto;</li></ol>
+<div class="boxes">dwiehrjfdusgfjwuegfgwfbbbcsiufhw
+hehuwehn cuyewnudfwm 
+idweh cwuhfwuehsdjfhwijnsnbuygrwndasmqe
+jciurfhcuhgfeurfc uhfuycsdnifwhefugwbwewheweuhuwdh\d\
+iewhewnfiwehf
+hdiwhn</div>
+<style>.boxes{border:5px solid black;
+width:200px;
+height:100px;
+padding:5px; Overflow:auto;}</style><br><br>
+
+<li><h2>Styling The Form:</h2></li>
+<div class="containers"><form><h1 class="main_heading"> FORM</h1>
+<h2>Contact info</h2>
+<p><b>Name: *</b><input type="text"  required name="name" placeholder="Dia Mirza" ></p>
+<fieldset><legend><b>GENDER: *</b></legend>
+<p><b>Male</b><input type="radio" required name="gender" id="male"></p>
+<p><b>Female</b><input type="radio"  required name="gender" id="female"</p></fieldset>
+<p><b>Address: *</b><textarea name="address" cols="30" rows="5" required id="address"></textarea></p>
+<p><b>Email: *</b><input type="email" name="email" id="email" placeholder=abcd@gmail.com required ></p>
+<p><b>Pincode:</b><input type="number"name="pincode" id="pincode" placeholder=283203 required ></p>
+<h2>Payment Info</h2>
+<p><b>Card type: *</b>
+<select name="card_type" id="card_type"  required >
+<option value="">--Selecting a card type--</option>
+<option value="">Master card</option>
+<option value="">Rupay</option>
+<option value="">VISA</option></select></p>
+<p><b>Card No: *</b><input type="number" name="card_number" id="card.no" placeholder=989898324 required ></p>
+<p><b>Expiration Date: *</b><input type="date" name="Exp_date" id="Exp_date" placeholder=2-5-2012 required ></p>
+<p><b>CVV: *</b><input type="password" name="CVV" id="cvv" placeholder=3454fse343 required ></p>
+<center><input type="Submit" value="Submit"></center>
+<center><input type="Reset" value="Reset"></center>
+<style>*
+body{font-family:arial; 
+margin:none; padding:10px;
+font-size:15px; color:green;
+}
+
+.containers{background-color:#f2f2f2;
+width:500px; height:1400px;
+padding:10px 10px 10px 10px; 
+border-radius:8px; border:4px solid gray;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"], textarea, select{width:100%; padding:10px; 
+border:3px solid #ccc; 
+border-radius:5px; margin:5px; }
+
+.main_heading{text-align:center;}
+select{width:100%; padding:10px; 
+border:3px solid #ccc; 
+border-radius:5px; margin:5px; }
+
+input[type="Submit"]{background-color:blue; color:white; padding:12px 20px;  border:none;  border-radius:4px; cursor:pointer; width:100%;}
+
+input[type="reset"]{background-color:skyblue; color:white; padding:12px 20px;  border:none;  border-radius:4px; cursor:pointer; width:100%;}
+
+input[type="Submit"]:hover{
+background-color:#4caf84;}
+input[type="reset"]:hover{
+background-color:#4caf84;}
+</style></form>
+<br><br><br><br>
+<li><h2>Clip-Path</h2></li>
+:-It is used to change the size of image or box. You can notice how the shape of image gets change into a circle.<br>
+<img class="clip-circle" src="D:\designs/cj.png" height="200" width="200">
+<style>
+.clip-circle{clip-path:circle(50% at 50% 50%);
+}
+</style>
+
+<li><h2>Box-Sizing</h2></li>
+<ul><li><h3>Content Box</h3></li>
+<div class="Cobox">Content Box</div>
+<style>.Cobox{width:160px; height:80px; padding:20px; border:8px solid green; background:yellow; color:blue;
+}
+.Cobox{box-sizing:content-box;}</style>
+
+<li><h3>Border Box</h3></li>
+<div class="bobox">Border Box</div>
+<style>.bobox{width:160px; height:80px; padding:20px; border:8px solid green; background:yellow; color:blue;
+}
+.bobox{box-sizing:border-box;}</style></ul>
+<li><h2>Z-Indexing</h2></li>
+
+<div class="layer1"><h3>More Z-index i.e.3</h3></div>
+<div class="layer2"><h3>Medium Z-index i.e.2</h3></div>
+<div class="layer3"><h3>Less Z-index i.e.1</h3></div>
+<style>
+.layer1{position:absolute;  right:70px;  top:8000px; width:200px; height:90px; background-color:orange; border:1px solid blue; padding:15px; z-index:3;
+}
+.layer2{position:absolute;  right:80px;  top:8050px;width:200px; height:80px; background-color:white; border:1px solid blue; padding:15px; z-index:2;
+}
+.layer3{position:absolute;  right:90px;   top:8100px; width:200px; height:70px; background-color:green; border:1px solid blue; padding:15px; z-index:1; 
+}
+</style>
+:-It is used in adjusting the image to front or behind the second object. Bigger the Z-index value , it will come at very front of the object.<br><br>
+<li><h2>Media Queries</h2></li>
+<h1>Layout</h1>
+:- it tells the way how browser lays out the HTML. By following ways:-
+<ul><li>display</li>
+<li>float</li>
+<li>cleared</li>
+<li>position</li></ul>
+<li><h2>Float & Cleared Property<h2></li>
+:- you can see below that by float property image can be shift to right or left side. And by clear property we can set the text which we want along with the image.
+<h1 class="head">Resume</h1><br>
+<img id="xob" src="C:\Users\acer\Desktop\task wd\IMG-20210914-WA0014.jpg">
+<p><b>Stepping stone</b> is a three book course that has been developed keeping</p>
+<p class="cleared"><b>Stepping stone</b> is a three book course that has been developed keeping in mind learners' needs and interests, and educators' requirements for a comprehensive course.
+<b>Stepping stone</b> is a three book course that has been developed keeping in mind learners' needs and interests, and educators' requirements for a comprehensive course.</p>
+
+<style>
+body{margin:0px;
+padding:0px;
+max-width:100%px; width:90%;
+}
+#xob{width:150px; height:150px; border-radius:5px; background:lightblue;  padding:1em; 
+float:right; margin:15px; 
+top:90px;
+}
+.head{background:lightskyblue; padding:15px; color:white; width:500px; height:20px; text-align:center;
+}
+.cleared{clear:right; width:100%;
+text-align:justify;
+}
+</style>
+<li><h2>Position Property</h2></li>
+:- it helps in setting the position of image or text.
+<ul>
+<li>Static</li>
+:-it sets the default position.
+<li>Relative</li>
+:-it provides the facility to set position of boxes seperately.
+<li>Absolute</li>
+:- it overlaps all the boxes.
+<li>Fixed</li>
+:- it fixes all the boxes as per your desired position,and the page will move but the boxes will not move.
+<li>Sticky</li>
+:- it sticks the boxes on the default place. it is mixture of relative and fixed.
+<div class="box-set">
+<div class=" obx box-1">Box 1</div>
+<div class="obx box-2">Box 2</div>
+<div class="obx box-3">Box 3</div>
+<div class="obx box-4">Box 4</div>
+</div>
+<style>
+.box-set, .obx{border-radius:6px;}
+.obx{background:#2db34a;  
+height:80px; width:80px;
+text-align:center;
+margin:20px;
+position:sticky;
+}
+.box-1{bottom:10px;}
+.box-2{left:10px;}
+.box-3{right:10px;}
+.box-4{top:10px;}
+</style>
+
+<h1>Flex Box</h1>
+:-it allows you to easily format the HTML and items will flex to different sizes to fit the space.
+<li><h2>Flex Model</h2></li>
+:-consists of:-
+<ul><li>flex container</li>
+<li>flex items</li>
+<li>main axis</li>
+<li>main size</li>
+<li>cross axis </li>
+<li>cross size</li></ul>
+<a href="file:///C:/Users/acer/Desktop/flex.html" target="blank">FLEX PROPERTIES</a>
+<h3>Properties:-</h3>
+<h3>1</h3>
+<ul><li>Display:block;</li>:-to make element's display as block andshows horizontally.
+<li>Display:flex;</li>:-shows in vertical way.</li></ul>
+<h3>2</h3>
+<ul><li>flex-direction:column;</li>
+<li>flex-direction:row;</li>
+<li>flex-direction:row-reverse;</li>
+<li>flex-direction:column-reverse;</li></ul>
+<h3>3</h3>
+<ul><li>justify-content:flex-end;</li>
+<li>justify-content:center;</li>
+<li>justify-content:space-between;</li>
+<li>justify-content:flex-start;</li></ul>
+<h3>4</h3>
+<ul><li>align-items:flex-end;</li>
+<li>align-items:center;</li>
+<li>align-items:flex-start;</li>
+<li>align-items:flex-stretch;</li>
+<li>align-items:baseline;</li></ul>
+<h3>5</h3>
+<ul><li>align-self:flex-end;</li>
+<li>align-self:center;</li>
+<li>align-self:flex-start;</li>
+<li>align-self:flex-stretch;</li>
+<li>align-self:baseline;</li></ul>
+<h3>6</h3>
+<ul><li>flex-wrap:nowrap;</li>
+<li>flex-wrap:wrap;</li>
+<li>flex-wrap:wrap-reverse;</li></ul>
+<h3>7</h3>
+<ul><li>flex-wrap:nowrap;</li>
+<li>flex-wrap:wrap;</li>
+<li>flex-wrap:wrap-reverse;</li></ul>
+<h2>Order properties;</h2>
+<h3>8</h3>
+<ul><li>flex-items;</li>
+<li>flex-basis;</li>
+<li>flex-grow;</li>
+<li>flex-shrink;</li>
+<li>flex-flow;</li></ul>
+<h1>CSS GRID</h1>
+:- it is a 2 dimensional layout system for the web.
+<h2>Grid layout</h2>
+<h3>1</h3>
+:- it is a collection of horizontal and vertical lines.
+<br><br><br>
+<a href="file:///C:/Users/acer/Desktop/css%20grid.html" target="blank">FLEX PROPERTIES</a><br><br>
+
+<ul><li>display:grid</li>
+:-to may the boxes in a grid form.
+<h3>2</h3>
+<li>grid-template-colums:200px 200px 200px;</li>
+<li>grid-template-rows:200px 200px 100px;</li>
+<li>grid-template-rows:1fr 1fr 1fr;</li>
+<li>grid-template-columns:repeat(3,1fr);</li>
+:- it used to make columns and to edit their sizes.
+<li>grid-template-columns:repeat(auto-fill,minmax(3,1fr));</li>
+:-to arrange the no. of boxes you need in a single line.
+<h3>3</h3>
+<li>grid-gap:20px;</li>
+:- to provide the gap between the boxes.
+<h3>4</h3>
+<li>grid-auto-rows:100px;</li>
+<li>grid-auto-columns:100px;</li>
+<li>grid-auto-rows:minmax(100px, auto);</li>
+<li>grid-auto-columns:minmax(100px, auto);</li>
+:-to increase the height of box column wise or row wise.
+<h3>5</h3>
+<li>grid-row-start:2;
+grid-row-end:3;</li>
+<li>grid-column-start:2;
+grid-row-end:3</li>
+:-it shifts the boxes to next line or helps in shifting the box where you required.
+<li>#item-1{grid-row-start:1;  grid-row-end:3;}</li>
+:-if you want to span only one box.
+<h3>6</h3>
+<li>column-gap:120px;</li>
+<li>row-gap:120px;</li>
+:- it is used to give gutters(gap) between boxes.;
+<h1>CSS ANIMATION</h1>
+:- it helps in providing the animation or transition effect to the object.
+<h3>Properties of animation:</h3>
+<ul><li>-name:bounce;</li> 
+<li>-duration:750ms/infinite;</li> 
+<li>-timing-function:linear;</li>
+<li>-delay:250ms:</li>
+<li>-iteration-count:2;</li>
+<li>-direction:reverse;</li>
+<li>-fill-mode:forward;</li>
+<li>-play-state:paused/running;</li></ul>
+<h3>SYNTAX</h3>
+animation:750ms linear 250ms 2 reverse forward paused;<br><br>
+<div class="gola"></div>
+<style>
+.gola{width:100px; height:100px; background:red; transition:width 2s height 4s border-radius 3s background:4s; }
+.gola:hover{width:300px; height:200px; border-radius:50%; background:green;}
+</style>
+<div class="loading">loading</div>
+<style>
+.loading{background:blue; border-radius:40%;
+color:white; cursor:pointer; font-size:0.75rem; font-weight:300; letter-spacing:0.2em; padding:1em 2em 1.1em; position:relative; text-transform:uppercase; vertical align:top; margin-top:100px; text-align:center; box-shadow:0 50px 50px rgba(7,9,21,0.9);
+animation:bouncing 0.5s ease 0s infinite alternate both;}
+@keyframes bouncing{
+0%{bottom:0px; box-shadow:0 0 5px rgba(0,0,0,0.5);}
+100%{bottom:50px;  box-shadow:0 50 50px rgba(0,0,0,0.1);}
+}
+</style>
+</body>
+</html>

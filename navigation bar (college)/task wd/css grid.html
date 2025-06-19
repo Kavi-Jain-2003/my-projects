@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>CSS GRID</title>
+<style>
+.container{display:grid;
+grid-auto-columns:minmax(100px,auto);
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+
+}
+.items{background:lightcoral;
+border:3px solid green;
+border-radius:3px;
+}
+#item-1{grid-column-start:1;
+grid-column-end:3};
+#item-2{grid-row-start:1;
+grid-row-end:3;}}
+.item-1-container{dispaly:grid;
+grid-template-column:repeat(3,1fr);}
+.nested-items{border:3px solid greenyellow;
+border-radius:3px;
+background:lightgoldenrodyellow;}
+
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="items item-1-container" id="item-1">Dabba1
+<div class="nested-items">dmd1</div>
+<div class="nested-items">dmd2</div>
+<div class="nested-items">dmd3</div>
+<div class="nested-items">dmd4</div>
+</div>
+<div class="items" id="item-2">Dabba2</div>
+<div class="items" id="item-3">Dabba3</div>
+<div class="items">Dabba4</div>
+<div class="items">Dabba5</div>
+</div>
+</body>
+</html>

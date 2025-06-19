@@ -1,0 +1,36 @@
+*{margin:0px;
+padding:0;
+box-sizing:border-box;
+}
+.container{
+height:100%;
+width:100%;
+background-image:url(disneyland.jfif);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+display:table;
+background-attachment:fixed;
+}
+.container h1{
+color:white;
+font-size:100px;
+display:table-cell;
+vertical-align:middle;
+text-align:center;
+text-shadow:5px 5px black;
+}
+.content h1 {
+text-align:center;
+}
+.content p{
+text-align:justify;
+margin-top:20px;
+}
+.images{
+display:flex;
+justify-content:space-around;
+}
+.images img{
+width:30%;
+}
